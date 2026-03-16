@@ -1,0 +1,17 @@
+{
+  "name": "neo4j",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "type": "module",
+  "dependencies": {
+    "express": "5.2.1",
+    "neo4j-driver": "6.0.1"
+  }
+}

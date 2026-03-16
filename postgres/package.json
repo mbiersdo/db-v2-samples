@@ -1,0 +1,20 @@
+{
+  "name": "postgres",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "embed:openai": "node embed.js generate openai",
+    "embed:ollama": "node embed.js generate ollama",
+    "get:openai": "node embed.js get openai",
+    "get:ollama": "node embed.js get ollama"
+  },
+  "keywords": [],
+  "author": "",
+  "type": "module",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^5.2.1",
+    "pg": "^8.20.0"
+  }
+}
