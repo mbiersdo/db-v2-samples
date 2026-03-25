@@ -1,8 +1,7 @@
 import express from "express";
 import { MongoClient } from "mongodb";
 
-const connectionString =
-  process.env.MONGODB_CONNECTION_STRING || "mongodb://localhost:27017";
+const connectionString = process.env.MONGODB_CONNECTION_STRING || "mongodb://localhost:27017";
 
 async function init() {
   const client = new MongoClient(connectionString);
@@ -11,7 +10,7 @@ async function init() {
   const app = express();
 
   app.get("/get", async (req, res) => {
-    const db = await client.db("adoption");
+    const db = client.db("adoption");
     const collection = db.collection("pets");
 
     const pets = await collection

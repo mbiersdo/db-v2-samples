@@ -1,9 +1,10 @@
 import express from "express";
 import redis from "redis";
+
 const client = redis.createClient();
 
 function cache(key, ttl, slowFn) {
-  return async function (...props) {
+  return async (...props) => {
     const cachedResponse = await client.get(key);
     if (cachedResponse) {
       return cachedResponse;

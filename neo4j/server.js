@@ -1,8 +1,7 @@
 import express from "express";
 import neo4j from "neo4j-driver";
 
-const CONNECTION_STRING =
-  process.env.NEO4J_CONNECTION_STRING || "bolt://localhost:7687";
+const CONNECTION_STRING = process.env.NEO4J_CONNECTION_STRING || "bolt://localhost:7687";
 
 const driver = neo4j.driver(CONNECTION_STRING);
 
